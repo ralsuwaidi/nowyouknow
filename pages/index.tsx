@@ -19,7 +19,7 @@ const Home: NextPage = () => {
           <div className='w-full h-full relative'>
 
             <img className='object-cover w-full h-full' src="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg" alt="fill murray" />
-            <div className="absolute inset-x-0 bottom-40 h-1/3 bg-gradient-to-t from-slate-900 to-transparent"></div>
+            <div className="absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-slate-900 to-transparent"></div>
 
           </div>
         </Background>
