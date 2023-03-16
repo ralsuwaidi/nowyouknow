@@ -2,6 +2,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
+    loader: 'akamai',
     remotePatterns: [
       {
         protocol: 'https',
