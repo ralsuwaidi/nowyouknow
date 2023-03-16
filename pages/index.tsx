@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
 
       {/* parallax background  */}
-      <Parallax strength={200}>
+      <Parallax strength={199}>
         <Background className="w-screen h-screen bg-cover">
           <div className='w-full h-full relative'>
 
@@ -24,16 +24,15 @@ const Home: NextPage = () => {
           </div>
         </Background>
 
-        <div className=' w-screen h-screen text-center'>
-          <div className='bg-black  w-screen bg-opacity-60 py-6 inset-x-0 bottom-0 absolute'>
-            <p className=' text-gray-300 text-sm'>small text</p>
+        <div className=' w-screen min-h-screen text-center'>
+          <div className='bg-black  w-screen bg-opacity-60 py-4 inset-x-0 bottom-0 absolute'>
             <p className=' text-white text-6xl font-bold'>Arcane</p>
             <div className=' flex text-white justify-center mt-4 gap-4'>
               <p className=' bg-yellow-300 bg-opacity-30 rounded-md px-2 text-sm backdrop-blur-sm'>12+</p>
               <p className=' bg-yellow-300 bg-opacity-30 rounded-md px-2 text-sm'>PG-15</p>
             </div>
 
-            <div className=' h-20'>
+            <div className=' h-28'>
               <div className='icon-scroll scale-75'></div>
             </div>
           </div>
