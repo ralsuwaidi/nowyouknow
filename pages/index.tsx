@@ -40,16 +40,26 @@ const Home: NextPage = () => {
       </Parallax>
 
 
-      <main className="flex w-full flex-1 flex-col  justify-center items-center mt-12 text-center ">
+      <main className="flex flex-1 flex-col mt-12 mx-4 ">
 
-        <div className=' text-start mx-4 max-w-2xl'>
-          <p className=' text-white font-bold text-xl'>Title</p>
-          <p className=' text-slate-500 text-sm bg-slate-800 px-2 py-4 rounded mt-2'>The foreground color of a card depends on the background color you choose for the card. Generally, for a dark-themed app, you would use a lighter color for the foreground so that the text and other elements are easily visible against the dark background. For example, if you choose a dark blue color for the background of the card, you could use white or off-white color for the foreground elements such as text, icons, etc. Alternatively, you could use a light gray color for the foreground to create a softer contrast. Ultimately, the choice of foreground color depends on the specific color palette you choose and the overall design aesthetic you want to achieve.</p>
+        <div className=' w-full  '>
+
+          <div className="w-full bg-gray-200  h-2.5 dark:bg-gray-700">
+            <div className="bg-blue-600 h-2.5 " style={{ width: "45%" }}></div>
+          </div>
+
         </div>
 
-        <div className=' text-start mx-4 max-w-2xl'>
+        {/* <p className=' text-white font-bold '> Movie</p> */}
+
+        <div className=' text-start max-w-2xl mt-4'>
           <p className=' text-white font-bold text-xl'>Title</p>
-          <p className=' text-slate-500 text-sm bg-slate-800 px-2 py-4 rounded mt-2'>The foreground color of a card depends on the background color you choose for the card. Generally, for a dark-themed app, you would use a lighter color for the foreground so that the text and other elements are easily visible against the dark background. For example, if you choose a dark blue color for the background of the card, you could use white or off-white color for the foreground elements such as text, icons, etc. Alternatively, you could use a light gray color for the foreground to create a softer contrast. Ultimately, the choice of foreground color depends on the specific color palette you choose and the overall design aesthetic you want to achieve.</p>
+          <p className=' text-slate-500 text-sm bg-slate-800  py-4 rounded mt-2'>The foreground color of a card depends on the background color you choose for the card. Generally, for a dark-themed app, you would use a lighter color for the foreground so that the text and other elements are easily visible against the dark background. For example, if you choose a dark blue color for the background of the card, you could use white or off-white color for the foreground elements such as text, icons, etc. Alternatively, you could use a light gray color for the foreground to create a softer contrast. Ultimately, the choice of foreground color depends on the specific color palette you choose and the overall design aesthetic you want to achieve.</p>
+        </div>
+
+        <div className=' text-start  max-w-2xl'>
+          <p className=' text-white font-bold text-xl'>Title</p>
+          <p className=' text-slate-500 text-sm bg-slate-800 py-4 rounded mt-2'>The foreground color of a card depends on the background color you choose for the card. Generally, for a dark-themed app, you would use a lighter color for the foreground so that the text and other elements are easily visible against the dark background. For example, if you choose a dark blue color for the background of the card, you could use white or off-white color for the foreground elements such as text, icons, etc. Alternatively, you could use a light gray color for the foreground to create a softer contrast. Ultimately, the choice of foreground color depends on the specific color palette you choose and the overall design aesthetic you want to achieve.</p>
         </div>
 
 
