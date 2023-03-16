@@ -15,17 +15,23 @@ const Home: NextPage = () => {
 
       {/* parallax background  */}
       <Parallax strength={200}>
-        <Background className=" w-screen h-screen bg-cover z-0">
-          <img className=' object-cover w-full h-full ' src="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg" alt="fill murray" />
+        <Background className="w-screen h-screen bg-cover z-0">
+          <div className='w-full h-full relative'>
+
+            <img className='object-cover w-full h-full' src="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg" alt="fill murray" />
+            <div className="absolute inset-x-0 bottom-40 h-1/3 bg-gradient-to-t from-slate-900 to-transparent"></div>
+
+          </div>
         </Background>
 
         <div style={{ height: '80vh', width: '100vw' }} />
       </Parallax>
 
+
       <main className="flex w-full flex-1 flex-col  justify-center items-center  text-center ">
 
         <div className='bg-slate-900 -mt-28 z-10 w-screen bg-opacity-20 py-6'>
-          <p className=' text-slate-200 text-sm'>small text</p>
+          <p className=' text-gray-300 text-sm'>small text</p>
           <p className=' text-white text-6xl font-bold'>Arcane</p>
           <div className=' flex text-white justify-center mt-4 gap-4'>
             <p className=' bg-yellow-300 bg-opacity-30 rounded-md px-2 text-sm backdrop-blur-sm'>12+</p>
@@ -35,12 +41,12 @@ const Home: NextPage = () => {
 
         <div className=' text-start mx-4 max-w-2xl'>
           <p className=' text-white font-bold text-xl'>Title</p>
-          <p className=' text-white text-sm bg-slate-800 px-2 py-4 rounded mt-2'>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+          <p className=' text-slate-500 text-sm bg-slate-800 px-2 py-4 rounded mt-2'>The foreground color of a card depends on the background color you choose for the card. Generally, for a dark-themed app, you would use a lighter color for the foreground so that the text and other elements are easily visible against the dark background. For example, if you choose a dark blue color for the background of the card, you could use white or off-white color for the foreground elements such as text, icons, etc. Alternatively, you could use a light gray color for the foreground to create a softer contrast. Ultimately, the choice of foreground color depends on the specific color palette you choose and the overall design aesthetic you want to achieve.</p>
         </div>
 
         <div className=' text-start mx-4 max-w-2xl mt-4'>
           <p className=' text-white font-bold text-xl'>Title</p>
-          <p className=' text-white text-sm bg-slate-800 px-2 py-4 rounded mt-2'>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+          <p className=' text-slate-500 text-sm bg-slate-800 px-2 py-4 rounded mt-2'>For a dark theme, you can use light colors for foreground elements to create contrast and make them stand out. Some popular light colors for foreground text in a dark theme include white, light gray, or a light shade of a primary or accent color. For example, you could use text-white or text-gray-100 as a class in Tailwind to set the text color to white or light gray respectively.</p>
         </div>
 
       </main>
