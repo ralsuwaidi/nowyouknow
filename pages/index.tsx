@@ -24,7 +24,6 @@ const Home: NextPage = () => {
 
       <main className="flex w-full flex-1 flex-col  justify-center items-center  text-center ">
 
-
         <div className='bg-slate-900 -mt-28 z-10 w-screen bg-opacity-20 py-6'>
           <p className=' text-slate-200 text-sm'>small text</p>
           <p className=' text-white text-6xl font-bold'>Arcane</p>
