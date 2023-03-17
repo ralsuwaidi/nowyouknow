@@ -5,4 +5,13 @@ module.exports = {
     loader: 'akamai',
     path: '',
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '*',
+        port: '',
+      }
+    ]
+  }
 }
