@@ -10,9 +10,9 @@ import { FaSyringe, FaStarAndCrescent } from "react-icons/fa";
 import { Background, Parallax } from 'react-parallax';
 import 'react-tippy/dist/tippy.css';
 import {
-  Tooltip, TooltipProps as Props
+  Tooltip
 } from 'react-tippy';
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode } from 'react';
 
 
 
@@ -66,9 +66,6 @@ function PrimaryIcon({ children }: PrimaryIconProps) {
 
 
 const Home: NextPage = () => {
-
-
-
   return (
     <div className="flex bg-slate-900 min-h-screen flex-col justify-center ">
       <Head>
@@ -100,9 +97,9 @@ const Home: NextPage = () => {
 
           <div className='bg-black  w-screen bg-opacity-60 py-4 inset-x-0 bottom-0 absolute'>
             <p className=' text-white text-6xl font-bold'>Arcane</p>
-            <div className=' flex text-white justify-center mt-4 gap-4'>
-              <p className=' bg-yellow-300 bg-opacity-30 rounded-md px-2 text-sm backdrop-blur-sm'>12+</p>
-              <p className=' bg-yellow-300 bg-opacity-30 rounded-md px-2 text-sm'>PG-15</p>
+            <div className=' flex text-white justify-center mt-4 gap-3'>
+              <p className=' backdrop-blur-sm bg-white/30  rounded px-2 text-sm '>12+</p>
+              <p className=' backdrop-blur-sm bg-white/30  rounded px-2 text-sm'>PG-15</p>
             </div>
 
             <div className=' h-28'>
@@ -228,7 +225,7 @@ const Home: NextPage = () => {
       </main>
 
       <footer className="flex h-24 w-full items-center justify-center px-4">
-        <p className=' text-xs text-slate-500'>* The rating system is subjective to the nowyouknow team and is meant to be used as an indicator</p>
+        <p className=' text-center text-xs text-slate-600'>The rating system is subjective to the nowyouknow team and is meant to be used as an indicator</p>
       </footer>
     </div>
   )
