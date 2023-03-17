@@ -56,7 +56,7 @@ function PrimaryIcon({ children }: PrimaryIconProps) {
 const Home: NextPage = () => (
   <div className="flex bg-slate-900 min-h-screen flex-col justify-center ">
     <Head>
-      <title>Create Next App</title>
+      <title>NYK: Arcane</title>
       <link rel="icon" href="/favicon.ico" />
       <meta name="theme-color" content="#0f172a" />
     </Head>
