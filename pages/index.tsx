@@ -10,12 +10,18 @@ import { FaSyringe, FaStarAndCrescent } from "react-icons/fa";
 import { Background, Parallax } from 'react-parallax';
 import 'react-tippy/dist/tippy.css';
 import {
-  Tooltip,
+  Tooltip, TooltipProps as Props
 } from 'react-tippy';
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 
 
 
+
+declare module 'react-tippy' {
+  export interface TooltipProps {
+    children: ReactNode;
+  }
+}
 
 type indicator = {
   percentage: number,
@@ -66,16 +72,17 @@ const Home: NextPage = () => {
   return (
     <div className="flex bg-slate-900 min-h-screen flex-col justify-center ">
       <Head>
-        <title>NYK: Arcane</title>
+        <title>Arcane: A Fantasy Novel of Magic and Intrigue</title>
         <link rel="icon" href="/favicon.ico" />
         <meta name="theme-color" content="#0f172a" />
-        <meta name="description" content="NYK: Arcane is a fantasy novel set in a world of magic and intrigue." />
-        <meta property="og:title" content="NYK: Arcane" />
-        <meta property="og:description" content="NYK: Arcane is a fantasy novel set in a world of magic and intrigue." />
+        <meta name="description" content="Arcane is a fantasy novel set in a world of magic and intrigue. Follow the adventures of our heroes as they battle dark forces and uncover ancient mysteries." />
+        <meta property="og:title" content="Arcane: A Fantasy Novel of Magic and Intrigue" />
+        <meta property="og:description" content="Arcane is a fantasy novel set in a world of magic and intrigue. Follow the adventures of our heroes as they battle dark forces and uncover ancient mysteries." />
         <meta property="og:image" content="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg" />
         <meta name="twitter:card" content="summary_large_image" />
+        <meta property="og:whatsapp" content="whatsapp://send?text=Check%20out%20Arcane%2C%20a%20fantasy%20novel%20of%20magic%20and%20intrigue%3A%20https%3A%2F%2Fexample.com%2Farcane" />
+        <meta property="og:telegram" content="https://t.me/share/url?url=https%3A%2F%2Fexample.com%2Farcane&text=Check%20out%20Arcane%2C%20a%20fantasy%20novel%20of%20magic%20and%20intrigue" />
       </Head>
-
 
 
       {/* parallax background  */}
@@ -121,28 +128,35 @@ const Home: NextPage = () => {
           <div className=' grid grid-cols-2 gap-2 mt-4'>
 
             {indicator_var.map((indicator) => (
+              <Tooltip
+                // options
+                title="High Violence"
+                position="top"
+                trigger="click"
+                size='small'
+              >
+                <div className=' bg-slate-800 rounded p-2'>
 
-              <div className=' bg-slate-800 rounded p-2'>
+                  <div className=' flex gap-2'>
 
-                <div className=' flex gap-2'>
-
-                  <p className=' text-slate-500 text-xs'>{indicator.title} </p>
-                  {/* <div className=' text-slate-500 text-sm my-auto'> <AiOutlineInfoCircle /></div> */}
-                </div>
-
-
-                <div className=' flex gap-2'>
-
-                  <p className=' text-white text-lg'>{indicator.percentage}</p>
-
-                  <div className=' w-full my-auto'>
-                    <div className="w-full bg-gray-200 rounded h-1.5 dark:bg-gray-700">
-                      <div className="bg-teal-500 rounded h-1.5 " style={{ width: indicator.percentage.toString() + '%' }}></div>
-                    </div>
+                    <p className=' text-slate-500 text-xs'>{indicator.title} </p>
+                    <div className=' text-slate-500 text-xs my-auto'> <AiOutlineInfoCircle /></div>
                   </div>
 
+
+                  <div className=' flex gap-2'>
+
+                    <p className=' text-white text-lg'>{indicator.percentage}</p>
+
+                    <div className=' w-full my-auto'>
+                      <div className="w-full bg-gray-200 rounded h-1.5 dark:bg-gray-700">
+                        <div className="bg-teal-500 rounded h-1.5 " style={{ width: indicator.percentage.toString() + '%' }}></div>
+                      </div>
+                    </div>
+
+                  </div>
                 </div>
-              </div>
+              </Tooltip>
             ))}
           </div>
 
