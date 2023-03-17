@@ -1,10 +1,11 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { IconContext, IconType } from 'react-icons';
+import { IconContext } from 'react-icons';
 import { MdLocalMovies } from "react-icons/md";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { BsFillMicMuteFill } from "react-icons/bs";
 import { GiFist } from "react-icons/gi";
+import { HiLanguage } from "react-icons/hi2";
 import { RiNetflixFill } from "react-icons/ri";
 import { FaSyringe, FaStarAndCrescent } from "react-icons/fa";
 import { Background, Parallax } from 'react-parallax';
@@ -144,7 +145,7 @@ const Home: NextPage = () => (
 
         <div className=' text-start mt-4 px-4 py-6 bg-slate-800 rounded'>
           <PrimaryIcon>
-            <BsFillMicMuteFill />
+            <HiLanguage />
           </PrimaryIcon>
           <p className=' text-white text-xl mt-2'>Language</p>
           <article className=' text-slate-500 text-sm mt-2 prose prose-invert'>
@@ -188,7 +189,8 @@ const Home: NextPage = () => (
       </div>
     </main>
 
-    <footer className="flex h-24 w-full items-center justify-center">
+    <footer className="flex h-24 w-full items-center justify-center px-4">
+      <p className=' text-xs text-slate-500'>* The rating system is subjective to the nowyouknow team and is meant to be used as an indicator</p>
     </footer>
   </div>
 )
