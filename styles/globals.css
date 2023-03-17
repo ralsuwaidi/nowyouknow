@@ -31,7 +31,7 @@ body {
   margin-left: -4px;
   top: 8px;
   border-radius: 4px;
-  animation-duration: 1.5s;
+  animation-duration: 2s;
   animation-iteration-count: infinite;
   animation-name: scroll;
 }

@@ -134,7 +134,7 @@ const Home: NextPage = () => {
               >
                 <div className=' bg-slate-800 rounded p-2'>
 
-                  <div className=' flex gap-2'>
+                  <div className=' flex justify-between gap-2'>
 
                     <p className=' text-slate-500 text-xs'>{indicator.title} </p>
                     <div className=' text-slate-500 text-xs my-auto'> <AiOutlineInfoCircle /></div>
