@@ -67,7 +67,7 @@ function PrimaryIcon({ children }: PrimaryIconProps) {
 
 const Home: NextPage = () => {
   return (
-    <div className="flex bg-slate-900 min-h-screen flex-col justify-center ">
+    <div >
       <Head>
         <title>Arcane: A Fantasy Novel of Magic and Intrigue</title>
         <link rel="icon" href="/favicon.ico" />
@@ -113,7 +113,7 @@ const Home: NextPage = () => {
       </Parallax>
 
 
-      <main className="flex flex-1 flex-col mt-6 mx-4 ">
+      <main className=" mt-6 mx-4 ">
         <div className=' mx-auto max-w-2xl'>
 
           <div className=' flex gap-2'>
