@@ -71,6 +71,8 @@ const Home: NextPage = () => {
       <Head>
         <title>Arcane: A Fantasy Novel of Magic and Intrigue</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="theme-color" content="#0f172a" />
         <meta name="description" content="Arcane is a fantasy novel set in a world of magic and intrigue. Follow the adventures of our heroes as they battle dark forces and uncover ancient mysteries." />
         <meta property="og:title" content="Arcane: A Fantasy Novel of Magic and Intrigue" />
