@@ -121,36 +121,28 @@ const Home: NextPage = () => {
           <div className=' grid grid-cols-2 gap-2 mt-4'>
 
             {indicator_var.map((indicator) => (
-              <Tooltip
-                // options
-                title="High Violence"
-                position="top"
-                trigger="click"
-                size='small'
 
-              >
-                <div className=' bg-slate-800 rounded p-2'>
+              <div className=' bg-slate-800 rounded p-2'>
 
-                  <div className=' flex gap-2'>
+                <div className=' flex gap-2'>
 
-                    <p className=' text-slate-500 text-xs'>{indicator.title} </p>
-                    <div className=' text-slate-500 text-sm my-auto'> <AiOutlineInfoCircle /></div>
-                  </div>
-
-
-                  <div className=' flex gap-2'>
-
-                    <p className=' text-white text-lg'>{indicator.percentage}</p>
-
-                    <div className=' w-full my-auto'>
-                      <div className="w-full bg-gray-200 rounded h-1.5 dark:bg-gray-700">
-                        <div className="bg-teal-500 rounded h-1.5 " style={{ width: indicator.percentage.toString() + '%' }}></div>
-                      </div>
-                    </div>
-
-                  </div>
+                  <p className=' text-slate-500 text-xs'>{indicator.title} </p>
+                  {/* <div className=' text-slate-500 text-sm my-auto'> <AiOutlineInfoCircle /></div> */}
                 </div>
-              </Tooltip>
+
+
+                <div className=' flex gap-2'>
+
+                  <p className=' text-white text-lg'>{indicator.percentage}</p>
+
+                  <div className=' w-full my-auto'>
+                    <div className="w-full bg-gray-200 rounded h-1.5 dark:bg-gray-700">
+                      <div className="bg-teal-500 rounded h-1.5 " style={{ width: indicator.percentage.toString() + '%' }}></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
             ))}
           </div>
 
