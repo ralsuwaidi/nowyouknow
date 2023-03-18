@@ -2,16 +2,13 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import { IconContext } from 'react-icons';
 import { MdLocalMovies } from "react-icons/md";
-import { AiFillEyeInvisible, AiOutlineInfoCircle } from "react-icons/ai";
+import { AiFillEyeInvisible } from "react-icons/ai";
 import { GiFist } from "react-icons/gi";
 import { HiLanguage } from "react-icons/hi2";
 import { RiNetflixFill } from "react-icons/ri";
 import { FaSyringe, FaStarAndCrescent } from "react-icons/fa";
 import 'react-tippy/dist/tippy.css';
-import {
-    Tooltip
-} from 'react-tippy';
-import { ReactNode, useEffect, useState } from 'react';
+import { ReactNode } from 'react';
 import { useRouter } from 'next/router';
 import ParallaxBackground from '../../components/detail/parallax-background';
 import IndicatorScore, { IndicatorScoreProps } from '../../components/detail/indicator-score';
@@ -69,36 +66,6 @@ const Home: NextPage = () => {
     const {
         query: { mid },
     } = router;
-
-    const [icon, setIcon] = useState<Element | null>(null);
-
-    useEffect(() => {
-        setIcon(document.querySelector('.icon-scroll'));
-    }, []);
-
-    const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        const pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        const scrollPercentage = (scrollPosition / pageHeight) * 100;
-
-        if (icon !== null) {
-            if (scrollPercentage >= 15) {
-                icon.classList.add('hidden');
-            } else {
-                icon.classList.remove('hidden');
-            }
-        }
-    };
-
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll);
-
-        return () => {
-            window.removeEventListener('scroll', handleScroll);
-        };
-    }, [icon]);
-
-
 
     return (
         <div dir='rtl' >
