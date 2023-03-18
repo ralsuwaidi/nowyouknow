@@ -57,7 +57,6 @@ const Home: NextPage = () => {
         if (pid) {
             MovieApi.get(Number(pid)).then((response) => {
                 setMovie(response.data.data);
-                console.log(response)
                 setIsLoading(false);
             }).catch((error) => {
                 console.error(error);
