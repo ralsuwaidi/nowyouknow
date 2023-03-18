@@ -54,28 +54,31 @@ const movies = [
 
 const MovieList: NextPage = () => {
   return (
-    <div className=" mx-4 mt-4 md:mt-8">
+    <div className=" max-w-4xl mx-auto">
+      <div className=" mx-4 mt-4 md:mt-8">
 
-      <p className=" text-white text-3xl md:text-5xl font-bold">NowYouKnow</p>
+        <p className=" text-white text-3xl md:text-5xl font-bold">NowYouKnow</p>
 
-      <div className=" mt-4 md:mt-8">
-        <SearchBar />
+        <div className=" mt-4 md:mt-8">
+          <SearchBar />
+        </div>
+
+        <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 mt-4 md:mt-8 h-48">
+          {movies.map((movie) => (
+            <div key={movie.id} >
+              <Link href={`/movie/${movie.id}`}>
+                <div className="h-48 md:h-64">
+                  <img
+                    src={movie.imageUrl}
+                    alt={movie.alt}
+                    className="object-cover h-full w-full rounded-lg"
+                  />
+                </div>
+              </Link>
+            </div>
+          ))}
+        </div>
       </div>
-
-      <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 mt-4 md:mt-8 h-48">
-        {movies.map((movie) => (
-          <div key={movie.id} >
-            <Link href={`/movie/${movie.id}`}>
-              <img
-                src={movie.imageUrl}
-                alt={movie.alt}
-                className="object-cover h-full w-full rounded-lg"
-              />
-            </Link>
-          </div>
-        ))}
-      </div>
-
     </div >
   )
 }

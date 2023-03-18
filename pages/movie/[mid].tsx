@@ -104,8 +104,7 @@ const Home: NextPage = () => {
                             <RiNetflixFill />
                         </div>
                     </div>
-                    <p className=' text-slate-500 text-xs'>Duration: 2h 30min</p>
-                    <p className=' text-slate-500 text-xs'>mid: {mid}</p>
+                    <p className=' text-slate-500 text-xs'>المدة الزمنية: 2h 30min</p>
 
                     <div className=' grid grid-cols-2 gap-2 mt-4'>
 
