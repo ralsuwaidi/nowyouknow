@@ -116,16 +116,15 @@ const Home: NextPage = () => {
                             <div className=' grid grid-cols-2 gap-2 mt-4'>
                                 {movie &&
                                     <>
-                                        <IndicatorScore name="مواضيع غير مناسبة" percentage={movie?.attributes.inappropriate_rating} tooltipText="sample tooltip" />
-                                        <IndicatorScore name="ألفاظ غير لائقة" percentage={movie?.attributes.language_rating} tooltipText="sample tooltip" />
-                                        <IndicatorScore name="مشاهد عنيفة" percentage={movie?.attributes.violence_rating} tooltipText="sample tooltip" />
-                                        <IndicatorScore name="الإجمالي" percentage={CalculateOverall(movie)} tooltipText="sample tooltip" />
-
+                                        <IndicatorScore name="مواضيع غير مناسبة" percentage={movie?.attributes.inappropriate_rating} tooltipText="مواضيع ومشاهد غير مناسبة وغير لائقة للأطفال" />
+                                        <IndicatorScore name="ألفاظ غير لائقة" percentage={movie?.attributes.language_rating} tooltipText="ألفاظ غير لائقة" />
+                                        <IndicatorScore name="مشاهد عنيفة" percentage={movie?.attributes.violence_rating} tooltipText="سفك الدماء, قتل " />
+                                        <IndicatorScore name="الإجمالي" percentage={CalculateOverall(movie)} tooltipText="النسبة الإجمالية للمؤشرات السابقة" />
                                     </>
-
                                 }
-
                             </div>
+
+                            <p className=' text-slate-500 text-xs mt-1'>ارتفاع النسبة يدل على مدى تواجد هذا المؤشر في المحتوى</p>
 
                             <div className=' text-start mt-4 px-4 py-6 bg-slate-800 rounded'>
                                 <IndicatorContent
@@ -154,7 +153,6 @@ const Home: NextPage = () => {
                                         </PrimaryIcon>
                                     }
                                 >
-
                                     {movie &&
                                         <ReactMarkdown>
                                             {movie?.attributes.inappropriate}
@@ -172,7 +170,6 @@ const Home: NextPage = () => {
                                         </PrimaryIcon>
                                     }
                                 >
-
                                     {movie &&
                                         <ReactMarkdown>
                                             {movie?.attributes.language}

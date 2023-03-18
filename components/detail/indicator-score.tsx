@@ -19,12 +19,15 @@ const IndicatorScore: React.FC<IndicatorScoreProps> = ({ name, percentage, toolt
             <div className="bg-slate-800 rounded p-2">
                 <div className="flex justify-between gap-2">
                     <p className="text-slate-500 text-xs">{name}</p>
-                    <div className="text-slate-500 text-xs my-auto">
+                    <div className="text-slate-300 text-xs font-bold my-auto">
                         <AiOutlineInfoCircle />
                     </div>
                 </div>
                 <div className="flex gap-2">
-                    <p className="text-white text-lg">{percentage}</p>
+                    <div className=' flex '>
+                        <p className="text-slate-500 text-sm my-auto">%&nbsp;</p>
+                        <p className="text-white text-lg">{percentage}</p>
+                    </div>
                     <div className="w-full my-auto">
                         <div className="w-full bg-gray-200 rounded h-1.5 dark:bg-gray-700">
                             <div
