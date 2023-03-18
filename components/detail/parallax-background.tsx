@@ -13,7 +13,7 @@ const ParallaxBackground: React.FC<ParallaxProps> = ({ imgUrl, title, ageRating1
         <Parallax strength={199}>
             <Background className="w-screen h-screen bg-cover">
                 <div className='w-full h-full relative'>
-                    <img className='object-cover w-full h-full' src={imgUrl} alt="fill murray" />
+                    <img className='object-cover w-full h-full' src={imgUrl} alt="movie poster" />
                 </div>
             </Background>
 

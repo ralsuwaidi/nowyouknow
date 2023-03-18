@@ -7,5 +7,5 @@ export const CalculateOverall = (movie: MovieDataType): number => {
 
   const total = violence_rating + inappropriate_rating + language_rating;
 
-  return (total * 100) / 300;
+  return Math.floor((total * 100) / 300);
 };

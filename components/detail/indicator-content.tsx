@@ -3,10 +3,10 @@ import React, { FC } from 'react';
 export interface IndicatorContentProps {
     title: string;
     icon: React.ReactNode;
-    content: string;
+    children: React.ReactNode
 }
 
-const IndicatorContent: FC<IndicatorContentProps> = ({ title, icon, content }) => {
+const IndicatorContent: FC<IndicatorContentProps> = ({ title, icon, children }) => {
     return (
         <>
             <div className='text-center'>
@@ -14,7 +14,7 @@ const IndicatorContent: FC<IndicatorContentProps> = ({ title, icon, content }) =
             </div>
             <p className=' text-white text-xl mt-2'>{title}</p>
             <article className=' text-slate-500 text-sm mt-2 prose prose-invert'>
-                <p>{content}</p>
+                {children}
             </article>
         </>
     );

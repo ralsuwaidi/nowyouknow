@@ -83,3 +83,16 @@ export interface MovieResponseType {
     };
   };
 }
+
+export interface SingleMovieResponseType {
+  data: {
+    data: MovieDataType;
+    meta: {
+      pagination: {
+        start: number;
+        limit: number;
+        total: number;
+      };
+    };
+  };
+}

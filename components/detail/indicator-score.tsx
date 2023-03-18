@@ -4,7 +4,7 @@ import { AiOutlineInfoCircle } from 'react-icons/ai';
 
 export interface IndicatorScoreProps {
     name: string;
-    percentage: number;
+    percentage?: number;
     tooltipText: string;
 }
 
