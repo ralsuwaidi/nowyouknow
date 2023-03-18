@@ -11,7 +11,7 @@ import 'react-tippy/dist/tippy.css';
 import {
     Tooltip
 } from 'react-tippy';
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import ParallaxBackground from '../../components/detail/parallax-background';
 import IndicatorScore, { IndicatorScoreProps } from '../../components/detail/indicator-score';
@@ -70,22 +70,34 @@ const Home: NextPage = () => {
         query: { mid },
     } = router;
 
-    const icon = document.querySelector('.icon-scroll');
+    const [icon, setIcon] = useState<Element | null>(null);
 
-    window.addEventListener('scroll', () => {
+    useEffect(() => {
+        setIcon(document.querySelector('.icon-scroll'));
+    }, []);
+
+    const handleScroll = () => {
         const scrollPosition = window.scrollY;
         const pageHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrollPercentage = (scrollPosition / pageHeight) * 100;
 
-        if (icon != null) {
+        if (icon !== null) {
             if (scrollPercentage >= 15) {
                 icon.classList.add('hidden');
             } else {
                 icon.classList.remove('hidden');
             }
         }
+    };
 
-    });
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, [icon]);
+
 
 
     return (
@@ -107,7 +119,6 @@ const Home: NextPage = () => {
                 <meta property="og:image:height" content="600" />
                 <meta property="og:image:type" content="image/jpeg" />
                 <meta property="og:whatsapp:image" content="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg" />
-
             </Head>
 
             <ParallaxBackground
