@@ -26,16 +26,17 @@ const MovieList: NextPage = () => {
             </form>
 
             <div className="grid grid-cols-3 gap-3 mt-4">
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg"
                         alt="alt name"
                         fill
                         style={{ objectFit: "cover" }}
+                        loader={({ src }) => `https://oyster-app-a6xp9.ondigitalocean.app/${src}`}
                     />
                 </div>
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg"
                         alt="alt name"
@@ -44,7 +45,7 @@ const MovieList: NextPage = () => {
                     />
                 </div>
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://marketplace.canva.com/EAE--qO1Or0/1/0/1600w/canva-black-and-red-minimalist-movie-poster-landscape-wN-DsZQzivs.jpg"
                         alt="alt name"
@@ -53,7 +54,7 @@ const MovieList: NextPage = () => {
                     />
                 </div>
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg"
                         alt="alt name"
@@ -63,7 +64,7 @@ const MovieList: NextPage = () => {
                 </div>
 
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg"
                         alt="alt name"
@@ -72,7 +73,7 @@ const MovieList: NextPage = () => {
                     />
                 </div>
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg"
                         alt="alt name"
@@ -81,7 +82,7 @@ const MovieList: NextPage = () => {
                     />
                 </div>
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg"
                         alt="alt name"
@@ -90,7 +91,7 @@ const MovieList: NextPage = () => {
                     />
                 </div>
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://marketplace.canva.com/EAE--qO1Or0/1/0/1600w/canva-black-and-red-minimalist-movie-poster-landscape-wN-DsZQzivs.jpg"
                         alt="alt name"
@@ -99,7 +100,7 @@ const MovieList: NextPage = () => {
                     />
                 </div>
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg"
                         alt="alt name"
@@ -110,7 +111,7 @@ const MovieList: NextPage = () => {
 
 
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg"
                         alt="alt name"
@@ -120,7 +121,7 @@ const MovieList: NextPage = () => {
                 </div>
 
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://marketplace.canva.com/EAFH3gODxw4/1/0/1131w/canva-black-%26-white-modern-mystery-forest-movie-poster-rLty9dwhGG4.jpg"
                         alt="alt name"
@@ -129,7 +130,7 @@ const MovieList: NextPage = () => {
                     />
                 </div>
 
-                <div className="relative h-48 ">
+                <div className="relative h-48">
                     <Image
                         src="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg"
                         alt="alt name"
