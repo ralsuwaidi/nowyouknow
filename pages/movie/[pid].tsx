@@ -58,19 +58,19 @@ const Home: NextPage = () => {
                         <title>{movie?.attributes.title} | NowYouKnow</title>
                         <link rel="icon" href="/favicon.ico" />
                         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-                        <meta name="description" content="Arcane is a fantasy novel set in a world of magic and intrigue. Follow the adventures of our heroes as they battle dark forces and uncover ancient mysteries." />
+                        <meta name="description" content={movie?.attributes.summary} />
                         <meta name="theme-color" content="#0f172a" />
                         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
                         <meta name="twitter:card" content="summary_large_image" />
                         <meta name="og:title" content={movie?.attributes.title + " | NowYouKnow"} />
-                        <meta name="og:description" content="Arcane is a fantasy novel set in a world of magic and intrigue. Follow the adventures of our heroes as they battle dark forces and uncover ancient mysteries." />
+                        <meta name="og:description" content={movie?.attributes.summary} />
                         <meta name="og:whatsapp" content="whatsapp://send?text=Check%20out%20Arcane%2C%20a%20fantasy%20novel%20of%20magic%20and%20intrigue%3A%20https%3A%2F%2Fexample.com%2Farcane" />
                         <meta name="og:telegram" content="https://t.me/share/url?url=https%3A%2F%2Fexample.com%2Farcane&text=Check%20out%20Arcane%2C%20a%20fantasy%20novel%20of%20magic%20and%20intrigue" />
-                        <meta name="og:image" content="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg" />
+                        <meta name="og:image" content={movie?.attributes.poster.data.attributes.formats.small.url} />
                         <meta property="og:image:width" content="600" />
                         <meta property="og:image:height" content="600" />
                         <meta property="og:image:type" content="image/jpeg" />
-                        <meta property="og:whatsapp:image" content="https://static.invenglobal.com/upload/image/2021/10/13/i1634084905769735.jpeg" />
+                        <meta property="og:whatsapp:image" content={movie?.attributes.poster.data.attributes.formats.small.url} />
                     </Head>
 
                     {movie &&
