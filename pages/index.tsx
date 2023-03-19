@@ -33,12 +33,22 @@ const MovieList: NextPage = () => {
 
           <Head>
             <title>Movie List | NowYouKnow</title>
-            <meta name="description" content="Read reviews and ratings for The Godfather on NowYouKnow, the app designed to provide parents with information about movies and TV shows." />
+            <meta name="description" content="NowYouKnow - Find out if a movie is suitable for children." />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
             <meta property="og:title" content="Movie List | NowYouKnow" />
-            <meta property="og:description" content="Read reviews and ratings for The Godfather on NowYouKnow, the app designed to provide parents with information about movies and TV shows." />
-            <meta property="og:image" content="https://example.com/godfather-poster.jpg" />
-            <meta property="og:image:alt" content="The Godfather movie poster" />
+            <meta property="og:description" content="NowYouKnow - Find out if a movie is suitable for children." />
+            <meta property="og:image" content="https://images.unsplash.com/photo-1595425178239-7f2e3af36041?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
+            <meta property="og:image:alt" content="NowYouKnow logo" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="https://nowyouknow.ae/" />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:site_name" content="NowYouKnow" />
+            <meta property="whatsapp:site" content="NowYouKnow" />
+            <meta property="whatsapp:title" content="Movie List | NowYouKnow" />
+            <meta property="whatsapp:description" content="NowYouKnow - Find out if a movie is suitable for children." />
+            <meta property="whatsapp:image" content="https://images.unsplash.com/photo-1595425178239-7f2e3af36041?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
           </Head>
+
 
           <p className="text-white text-3xl md:text-5xl font-bold">NowYouKnow</p>
 
