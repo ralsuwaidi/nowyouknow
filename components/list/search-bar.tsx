@@ -32,7 +32,7 @@ export default function SearchBar({ setMovieResponse }: SearchBarProps) {
       <div className="relative w-full">
 
         {searching ? (
-          <div className=" absolute inset-y-0 left-0 mt-3 ml-3">
+          <div className=" absolute inset-y-0 left-0 mt-2.5 ml-3">
             <Spinner />
           </div>
         ) : (
