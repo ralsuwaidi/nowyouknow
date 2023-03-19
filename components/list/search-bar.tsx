@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import MovieApi from "../../lib/api/movie"
 import { MovieResponseType } from "../../lib/utils/movie-type"
-import { Spinner } from "../common/LoadingSpinner";
+import { Spinner } from "../common/loading-spinner";
 
 
 

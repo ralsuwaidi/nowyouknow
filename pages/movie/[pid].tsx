@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import { IconContext } from 'react-icons';
 import { MdLocalMovies } from "react-icons/md";
 import { AiFillEyeInvisible } from "react-icons/ai";
 import { GiFist } from "react-icons/gi";
@@ -11,37 +10,21 @@ import 'react-tippy/dist/tippy.css';
 import { ReactNode, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import ParallaxBackground from '../../components/detail/parallax-background';
-import IndicatorScore, { IndicatorScoreProps } from '../../components/detail/indicator-score';
+import IndicatorScore from '../../components/detail/indicator-score';
 import IndicatorContent from '../../components/detail/indicator-content';
 import MovieApi from '../../lib/api/movie';
-import { MovieDataType, MovieResponseType, SingleMovieResponseType } from '../../lib/utils/movie-type';
-import LoadingSpinner from '../../components/common/LoadingSpinner';
+import { MovieDataType } from '../../lib/utils/movie-type';
+import LoadingSpinner from '../../components/common/loading-spinner';
 import { getLargePoster } from '../../lib/utils/get-query';
 import { CalculateOverall } from '../../lib/utils/calculate-score';
 import ReactMarkdown from 'react-markdown';
+import Footer from '../../components/common/footer';
+import { PrimaryIcon } from '../../components/common/primary-icon';
 
 declare module 'react-tippy' {
     export interface TooltipProps {
         children: ReactNode;
     }
-}
-
-
-// add children to primaryIcons without this it causes an error
-interface PrimaryIconProps {
-    children: React.ReactNode;
-}
-
-
-function PrimaryIcon({ children }: PrimaryIconProps) {
-    return (
-        <IconContext.Provider value={{ size: '20px', className: 'text-white' }}>
-            <div className=' bg-teal-500 w-fit rounded p-1.5'>
-
-                <div>{children}</div>
-            </div>
-        </IconContext.Provider>
-    );
 }
 
 const Home: NextPage = () => {
@@ -233,9 +216,7 @@ const Home: NextPage = () => {
                         </div>
                     </main>
 
-                    <footer className="flex h-24 w-full items-center justify-center px-4">
-                        <p className=' text-center text-xs text-slate-600'>نظام التقييم يعتمد على رأي فريق "nowyouknow" ويقصد استخدامه كمؤشر</p>
-                    </footer>
+                    <Footer />
                 </div>
             )}
         </div>
