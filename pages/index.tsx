@@ -32,22 +32,27 @@ const MovieList: NextPage = () => {
         <div className="mx-4 mt-4 md:mt-8 ">
 
           <Head>
-            <title>Movie List | NowYouKnow</title>
-            <meta name="description" content="NowYouKnow - Find out if a movie is suitable for children." />
+            <title>قائمة الأفلام | الآن تعرف</title>
+            <meta name="description" content="الآن تعرف - اكتشف ما إذا كان الفيلم مناسبًا للأطفال." />
             <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <meta property="og:title" content="Movie List | NowYouKnow" />
-            <meta property="og:description" content="NowYouKnow - Find out if a movie is suitable for children." />
+            <meta property="og:title" content="قائمة الأفلام | الآن تعرف" />
+            <meta property="og:description" content="الآن تعرف - اكتشف ما إذا كان الفيلم مناسبًا للأطفال." />
             <meta property="og:image" content="https://images.unsplash.com/photo-1595425178239-7f2e3af36041?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
-            <meta property="og:image:alt" content="NowYouKnow logo" />
+            <meta property="og:image:alt" content="شعار الآن تعرف" />
             <meta property="og:type" content="website" />
             <meta property="og:url" content="https://nowyouknow.ae/" />
-            <meta property="og:locale" content="en_US" />
-            <meta property="og:site_name" content="NowYouKnow" />
+            <meta property="og:locale" content="ar_AE" />
+            <meta property="og:site_name" content="الآن تعرف" />
             <meta property="whatsapp:site" content="NowYouKnow" />
-            <meta property="whatsapp:title" content="Movie List | NowYouKnow" />
-            <meta property="whatsapp:description" content="NowYouKnow - Find out if a movie is suitable for children." />
+            <meta property="whatsapp:title" content="قائمة الأفلام | الآن تعرف" />
+            <meta property="whatsapp:description" content="الآن تعرف - اكتشف ما إذا كان الفيلم مناسبًا للأطفال." />
             <meta property="whatsapp:image" content="https://images.unsplash.com/photo-1595425178239-7f2e3af36041?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
-          </Head>
+            <meta property="telegram:site" content="@nowyouknow" />
+            <meta property="telegram:title" content="قائمة الأفلام | الآن تعرف" />
+            <meta property="telegram:description" content="الآن تعرف - اكتشف ما إذا كان الفيلم مناسبًا للأطفال." />
+            <meta property="telegram:image" content="https://images.unsplash.com/photo-1595425178239-7f2e3af36041?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80" />
+          </Head
+
 
 
           <p className="text-white text-3xl md:text-5xl font-bold">NowYouKnow</p>
