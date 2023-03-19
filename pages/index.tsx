@@ -32,26 +32,21 @@ const MovieList: NextPage = () => {
         <div className="mx-4 mt-4 md:mt-8 ">
 
           <Head>
-            <title>The Godfather | NowYouKnow</title>
+            <title>Movie List | NowYouKnow</title>
             <meta name="description" content="Read reviews and ratings for The Godfather on NowYouKnow, the app designed to provide parents with information about movies and TV shows." />
-            <meta property="og:title" content="The Godfather | NowYouKnow" />
+            <meta property="og:title" content="Movie List | NowYouKnow" />
             <meta property="og:description" content="Read reviews and ratings for The Godfather on NowYouKnow, the app designed to provide parents with information about movies and TV shows." />
             <meta property="og:image" content="https://example.com/godfather-poster.jpg" />
             <meta property="og:image:alt" content="The Godfather movie poster" />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content="The Godfather | NowYouKnow" />
-            <meta name="twitter:description" content="Read reviews and ratings for The Godfather on NowYouKnow, the app designed to provide parents with information about movies and TV shows." />
-            <meta name="twitter:image" content="https://example.com/godfather-poster.jpg" />
-            <meta name="twitter:image:alt" content="The Godfather movie poster" />
           </Head>
 
           <p className="text-white text-3xl md:text-5xl font-bold">NowYouKnow</p>
 
           <div className="mt-4 md:mt-8">
-            <SearchBar />
+            <SearchBar setMovieResponse={setMovieResponse} />
           </div>
 
-          <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 mt-4 md:mt-8 h-48 ">
+          <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 mt-5 md:mt-8 h-48 ">
             {movieResponse?.data.data.map((movie) => (
               <div key={movie.id}>
                 <Link href={`/movie/${movie.id}`}>

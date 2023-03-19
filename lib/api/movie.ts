@@ -9,6 +9,7 @@ import {
 type MovieApiType = {
   all: (page: number, limit?: number) => Promise<MovieResponseType>;
   get: (movieID: number) => Promise<SingleMovieResponseType>;
+  search: (title: string) => Promise<MovieResponseType>;
 };
 
 const SERVER_BASE_URL = process.env.NEXT_PUBLIC_SERVER_BASE_URL;
@@ -29,6 +30,12 @@ const MovieApi: MovieApiType = {
 
   get: (movieID: number) =>
     axios.get(`${SERVER_BASE_URL}/movies/${movieID}?populate=*`, config),
+
+  search: (title: string) =>
+    axios.get(
+      `${SERVER_BASE_URL}/movies/?populate=*&filters[title][$containsi]=${title}`,
+      config
+    ),
 };
 
 export default MovieApi;
