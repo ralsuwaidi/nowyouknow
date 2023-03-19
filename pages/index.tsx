@@ -9,6 +9,9 @@ import { CalculateOverall } from "../lib/utils/calculate-score";
 import LoadingSpinner from "../components/common/loading-spinner";
 import Head from "next/head";
 import NoMovie from "../components/list/no-movies";
+import IndicatorContent from "../components/detail/indicator-content";
+import { PrimaryIcon } from "../components/common/primary-icon";
+import { CgSandClock } from "react-icons/cg";
 
 const MovieList: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -63,30 +66,51 @@ const MovieList: NextPage = () => {
           </div>
 
           {movieResponse?.data.data.length ? (
-            <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 mt-5 md:mt-8 h-48 ">
-              {movieResponse?.data.data.map((movie) => (
-                <div key={movie.id}>
-                  <Link href={`/movie/${movie.id}`}>
-                    <div className="h-48 md:h-64">
-                      <img
-                        src={getSmallPoster(movie)}
-                        alt="alt"
-                        className="object-cover h-full w-full rounded-lg"
-                      />
-                    </div>
+            <>
 
-                    <div className="w-full my-auto mt-1">
-                      <div className="w-full bg-slate-600 rounded h-1.5 dark:bg-gray-700">
-                        <div
-                          className="bg-teal-500 rounded h-1.5"
-                          style={{ width: `${CalculateOverall(movie)}%` }}
-                        ></div>
+              <div className="grid grid-cols-3 md:grid-cols-4 gap-3 md:gap-4 mt-5 md:mt-8 h-48 ">
+                {movieResponse?.data.data.map((movie) => (
+                  <div key={movie.id}>
+                    <Link href={`/movie/${movie.id}`}>
+                      <div className="h-48 md:h-64">
+                        <img
+                          src={getSmallPoster(movie)}
+                          alt="alt"
+                          className="object-cover h-full w-full rounded-lg"
+                        />
                       </div>
-                    </div>
-                  </Link>
+
+                      <div className="w-full my-auto mt-1">
+                        <div className="w-full bg-slate-600 rounded h-1.5 dark:bg-gray-700">
+                          <div
+                            className="bg-teal-500 rounded h-1.5"
+                            style={{ width: `${CalculateOverall(movie)}%` }}
+                          ></div>
+                        </div>
+                      </div>
+                    </Link>
+                  </div>
+                ))}
+                <div dir="rtl" className=" text-center col-start-1 col-end-4 md:col-end-5 py-6 bg-slate-800 rounded px-4 mb-4 mt-2">
+
+                  <IndicatorContent
+                    title="وصلت إلى نهاية القائمة"
+                    icon={
+                      <div className=' flex justify-center '>
+                        <PrimaryIcon>
+                          <CgSandClock />
+                        </PrimaryIcon>
+                      </div>
+                    }
+                  >
+                    عد قريبًا للاطلاع على المزيد من المحتوى
+                  </IndicatorContent>
                 </div>
-              ))}
-            </div>
+
+              </div>
+
+
+            </>
           ) : (
             <div className=" text-center justify-center">
 
