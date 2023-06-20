@@ -9,3 +9,12 @@ export const CalculateOverall = (movie: MovieDataType): number => {
 
   return Math.floor((total * 100) / 300);
 };
+
+export const GetPercentage = (score: number): number => {
+  let convertedScore = score * 10
+  if (convertedScore > 100) {
+    convertedScore = Math.floor(convertedScore / 10)
+  }
+
+  return convertedScore
+}

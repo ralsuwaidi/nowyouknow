@@ -16,7 +16,7 @@ import MovieApi from '../../lib/api/movie';
 import { MovieDataType } from '../../lib/utils/movie-type';
 import LoadingSpinner from '../../components/common/loading-spinner';
 import { getLargePoster } from '../../lib/utils/get-query';
-import { CalculateOverall } from '../../lib/utils/calculate-score';
+import { CalculateOverall, GetPercentage } from '../../lib/utils/calculate-score';
 import ReactMarkdown from 'react-markdown';
 import Footer from '../../components/common/footer';
 import { PrimaryIcon } from '../../components/common/primary-icon';
@@ -73,6 +73,7 @@ const Home: NextPage = () => {
                         <meta property="og:whatsapp:image" content={movie?.attributes.poster.data.attributes.formats.small.url} />
                     </Head>
 
+                    {/* Conditionally render movie  */}
                     {movie &&
                         <ParallaxBackground
                             imgUrl={getLargePoster(movie)}
@@ -82,27 +83,29 @@ const Home: NextPage = () => {
                         />
                     }
 
-
+                    {/* start the bottom section  */}
                     <main className=" mt-6 mx-4 ">
                         <div className=' mx-auto max-w-2xl'>
-                            <div className=' flex gap-2'>
 
+                            {/* add netflix icon and title  */}
+                            <div className=' flex gap-2'>
                                 <p className=' text-white '>مسلسل </p>
                                 <div className='my-auto text-red-500'>
                                     <RiNetflixFill />
                                 </div>
                             </div>
 
-
+                            {/* add duration text  */}
                             <p className=' text-slate-500 text-xs'>المدة الزمنية :{movie?.attributes.duration}</p>
 
+                            {/* add progress and tooltip  */}
                             <div className=' grid grid-cols-2 gap-2 mt-4'>
                                 {movie &&
                                     <>
-                                        <IndicatorScore name="مواضيع غير مناسبة" percentage={movie?.attributes.inappropriate_rating} tooltipText="مواضيع ومشاهد غير مناسبة وغير لائقة للأطفال" />
-                                        <IndicatorScore name="ألفاظ غير لائقة" percentage={movie?.attributes.language_rating} tooltipText="ألفاظ غير لائقة" />
-                                        <IndicatorScore name="مشاهد عنيفة" percentage={movie?.attributes.violence_rating} tooltipText="سفك الدماء, قتل " />
-                                        <IndicatorScore name="الإجمالي" percentage={CalculateOverall(movie)} tooltipText="النسبة الإجمالية للمؤشرات السابقة" />
+                                        <IndicatorScore name="مواضيع غير مناسبة" percentage={GetPercentage(movie?.attributes.inappropriate_rating)} tooltipText="مواضيع ومشاهد غير مناسبة وغير لائقة للأطفال" />
+                                        <IndicatorScore name="ألفاظ غير لائقة" percentage={GetPercentage(movie?.attributes.language_rating)} tooltipText="ألفاظ غير لائقة" />
+                                        <IndicatorScore name="مشاهد عنيفة" percentage={GetPercentage(movie?.attributes.violence_rating)} tooltipText="سفك الدماء, قتل " />
+                                        <IndicatorScore name="الإجمالي" percentage={GetPercentage(CalculateOverall(movie))} tooltipText="النسبة الإجمالية للمؤشرات السابقة" />
                                     </>
                                 }
                             </div>

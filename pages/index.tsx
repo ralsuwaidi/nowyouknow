@@ -5,20 +5,21 @@ import SearchBar from "../components/list/search-bar";
 import { MovieResponseType } from "../lib/utils/movie-type";
 import MovieApi from "../lib/api/movie";
 import { getSmallPoster } from "../lib/utils/get-query";
-import { CalculateOverall } from "../lib/utils/calculate-score";
 import LoadingSpinner from "../components/common/loading-spinner";
 import Head from "next/head";
 import NoMovie from "../components/list/no-movies";
 import IndicatorContent from "../components/detail/indicator-content";
 import { PrimaryIcon } from "../components/common/primary-icon";
 import { CgSandClock } from "react-icons/cg";
+import { CalculateOverall, GetPercentage } from '../lib/utils/calculate-score';
+
 
 const MovieList: NextPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [movieResponse, setMovieResponse] = useState<MovieResponseType>();
 
   useEffect(() => {
-    MovieApi.all(0, 15).then((response) => {
+    MovieApi.all(0, 100).then((response) => {
       setMovieResponse(response);
       setIsLoading(false);
     }).catch((error) => {
@@ -84,7 +85,7 @@ const MovieList: NextPage = () => {
                         <div className="w-full bg-slate-600 rounded h-1.5 dark:bg-gray-700">
                           <div
                             className="bg-teal-500 rounded h-1.5"
-                            style={{ width: `${CalculateOverall(movie)}%` }}
+                            style={{ width: `${GetPercentage(CalculateOverall(movie))}%` }}
                           ></div>
                         </div>
                       </div>
