@@ -19,7 +19,7 @@ const ParallaxBackground: React.FC<ParallaxProps> = ({ imgUrl, title, ageRating1
 
             <div className=' w-screen min-h-screen text-center'>
                 <div className='bg-black  w-screen bg-opacity-60 py-4 inset-x-0 bottom-0 absolute'>
-                    <p className=' text-white text-6xl font-bold'>{title}</p>
+                    <p className=' text-white text-4xl md:text-6xl font-bold'>{title}</p>
                     <div className=' flex text-white justify-center mt-4 gap-3'>
                         <p className=' backdrop-blur-sm bg-white/30  rounded px-2 text-sm '>{ageRating1}</p>
                         <p className=' backdrop-blur-sm bg-white/30  rounded px-2 text-sm'>{ageRating2}</p>
